@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascade</title>
+    <style>
+        h1 {
+            color: red;
+        }
+
+        h1 {
+            color: green;
+        }
+        
+        .yellow{
+            color: yellow;
+        }
+
+        #nilo{
+            color: blue;
+        }
+
+        h1#nilo{
+            color:hotpink;  
+        }
+
+        h1.yellow#nilo{
+            color:yellow;
+        }
+
+        body h1.yellow#nilo{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="yellow" id="nilo">Hello World</h1>
+    
+</body>
+</html>

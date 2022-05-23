@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+
+    <style type="text/css">
+        .box{
+            width: 80px;
+            height: 80px;
+            background-color: yellowgreen;
+            /* position: static; */
+        }
+
+        .second{
+            /* actual postition bata */
+            position: relative;
+            left : 0px;
+        }
+
+        .container{
+            width: 900px;
+            height : 500px;
+            border : 1px solid red;
+        }
+
+        .container{
+
+        }
+
+        .second-container{
+
+        }
+        
+        .small-box{
+
+        }
+    </style>
+</head>
+<body>
+
+    <!-- two element does not overlap in normal mode
+        if i want to overlap 
+        
+    -->
+
+    <!-- position layout-->
+
+    <p class="box first">Box 1</p>
+    <p class="box second">Box 2</p>
+
+    <div class="container">
+        <div class="second-container">
+            <div class="small-box">
+            
+            </div>
+        </div>
+        
+
+    </div>
+    
+</body>
+</html>
