@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle</title>
+</head>
+<body>
+    
+    <p id="name">Bijay Kumar Karki</p>
+    <button id="click">Toggle</button>
+    <p id="counter"></p>
+    <p id="counterVisibility"></p>
+    <p id="counterHidden"></p>
+    
+    <script>
+        var visibilityCounter =0;
+        var hiddenCounter =0;
+        const clickMe = document.querySelector("button");
+        clickMe.addEventListener("click", function (){
+            const p = document.getElementById("name");
+            if(p.style.visibility == "hidden"){
+                p.style.visibility = "revert";
+                visibilityCounter +=1;
+            } else{
+                p.style.visibility = "hidden";
+                hiddenCounter +=1;
+            }
+        }
+        );
+        var button = document.getElementById("click"),
+  count = 0;
+  var show = document.getElementById("counter");
+  var show1 = document.getElementById("counterVisibility");
+  var show2 = document.getElementById("counterHidden");
+  var show = 
+button.onclick = function() {
+  count += 1;
+  show.innerHTML = "Clicked: " + count;
+  show1.innerHTML = "Visible: " + visibilityCounter;
+  show2.innerHTML = "Hidden: " + hiddenCounter;
+
+};
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello world</title>
+</head>
+<body>
+    <p onclick="alert('Hello')"> Click me!</p>
+    <h1 id=""> Click Me !</h1>
+    <h1 id=""> Click Me 2!</h1>
+    <h1 id="id"> Click Me 2!</h1>
+
+    <!-- internal java script -->
+    <script type="text/javascript">
+        //constant 
+       
+
+        // Array ma dinxa queryselectorall lay 
+        const ellByAll = document.querySelectorAll('h1');
+        const byID = document.getElementById('id');
+        const byTag = document.getElementsByTagName('h1');
+
+        const byClass = document.getElementsByClassName('h1');
+
+
+
+        const el = document.querySelector('h1');
+        el.style.color = "green";
+
+        ellByAll[0].style.color = "red";
+        console.log(el);
+        console.log(ell);
+
+        
+
+        
+    </script>
+</body>
+</html>
