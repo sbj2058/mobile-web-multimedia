@@ -11,11 +11,11 @@
     <script type="text/javascript">
         const subjectArray = [];
         const marksArray = [];
-        let averageMarks = 0;
+        let totalMarks = 0;
         for(var i = 0; i<5; i++){
 
-            
-            let subjectInput = prompt("Enter " + +" subject:");
+            var n = i+1;
+            let subjectInput = prompt("Enter " + n +" subject:");
             subjectArray[i] = subjectInput;
             
             let marksInput = parseInt(prompt("Enter marks of " + subjectArray[i]));
@@ -23,14 +23,14 @@
         }
 
         for(var j = 0; j<5; j++){
-            averageMarks += marksArray[j];
+            totalMarks += marksArray[j];
         }
 
         for(var k = 0; k<5; k++){
             document.write(subjectArray[k] + " : " + marksArray[k] +"</br>");
         }
-        document.write(averageMarks);
-        alert("Total Marks: "+averageMarks);
+        document.write(totalMarks);
+        alert("Total Marks: "+totalMarks);
     </script>
 </body>
 </html>
