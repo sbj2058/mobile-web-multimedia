@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input and Output System</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        const subjectArray = [];
+        const marksArray = [];
+        let averageMarks = 0;
+        for(var i = 0; i<5; i++){
+
+            
+            let subjectInput = prompt("Enter " + +" subject:");
+            subjectArray[i] = subjectInput;
+            
+            let marksInput = parseInt(prompt("Enter marks of " + subjectArray[i]));
+            marksArray[i] = marksInput;
+        }
+
+        for(var j = 0; j<5; j++){
+            averageMarks += marksArray[j];
+        }
+
+        for(var k = 0; k<5; k++){
+            document.write(subjectArray[k] + " : " + marksArray[k] +"</br>");
+        }
+        document.write(averageMarks);
+        alert("Total Marks: "+averageMarks);
+    </script>
+</body>
+</html>
