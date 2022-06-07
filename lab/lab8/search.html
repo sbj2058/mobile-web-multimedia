@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+</head>
+<body>
+    <form id="testForm" action="action.html" >
+        <input type="text" name="search" id="message" placeholder="Search"/>
+        <input type="submit">
+    </form>
+    
+    <script type="text/javascript">
+        const searchEl = document.querySelector('input[name=search]');
+        const form = document.getElementById("testForm");
+        searchEl.addEventListener("keyup",  function(event){
+            //validation (check the number of chacter)
+                // if < 5
+                    // display error and return 
+                        // if fail  >> Method return >> Negative 
+                            // return done use more than 10 
+            // check if enter key 
+                // true : submit
+                if (searchEl.value.length < 5){
+                    searchEl.style.color = "red";
+                }else{
+                    searchEl.style.color = "black";
+                }
+            if (event.code == "Enter"){
+                // event.preventDefault();
+                if (searchEl.value != ""){
+                    form.submit();
+                }else{
+                    alert("Enter any thing.");
+                }
+
+                
+            }
+            console.log(event);
+        });
+
+        
+    </script>
+</body>
+</html>

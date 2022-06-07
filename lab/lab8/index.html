@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 8</title>
+
+    <style type="text/css">
+        #email-error, #password-error{
+            display: none;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <form method="#" action="action.html" id="login-form">
+            <div>
+                <label for="email">Email</label>
+            <input type="text" id="email" placeholder="Email" >
+            <p id="email-error"></p>
+            </div>
+            
+            <div>
+                <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password" >
+            <p id="password-error"></p>
+            </div>
+            <input type="submit">
+            
+        </form>
+    </section> 
+    <script type="text/javascript">
+        const form = document.getElementById('login-form');
+        //submit is event type 
+        form.addEventListener('submit', function(event){
+            // alert("Validation");
+            // Validation
+            // parameter could be anything (event) 
+            console.log(event);
+            event.preventDefault();
+
+            const emailEl = document.querySelector("#email");
+            const passwordEl = document.querySelector("#password");
+            const emailErrorEl = document.querySelector("#email-error");
+            const passwordErrorEl = document.querySelector("#password-error");
+
+
+            console.log(emailEl.value);
+
+
+            if(emailEl.value != "" && passwordEl.value != ""){
+                form.submit();
+            }
+            emailEl.style.display="block";
+            emailErrorEl.textContent="Email is required";
+            passwordEl.style.display="block";
+            passwordErrorEl.textContent="Password is required";
+
+        })
+
+    </script>
+
+</body>
+</html>

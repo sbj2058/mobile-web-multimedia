@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    <p id="result" ></p>
+    
+    <script type="text/javascript">
+
+        // Types of functions
+        // no return without parameter
+        function sum(){
+            console.log(2+5);
+        }
+         sum();
+
+        // no return with parameter
+        function minus(num1, num2){
+            console.log((num1>num2) ? num1-num2 : num2 - num1);
+
+        }
+        minus(5,2);
+        minus(5,22);
+
+        // return without parameter
+        function isEligibleAge(){
+            let age = 18;
+            return age >=16 ? true : false;
+
+        }
+        let testReturn = isEligibleAge(); 
+        console.log(testReturn);
+
+        if(isEligibleAge()) {
+            console.log("Eligible to vote");
+        }
+
+        if(isEligibleAge()) {
+            console.log("Eligible to issue Passport");
+        }
+
+        //return with parameter
+        function isEligibleAgeWithParam(age)
+        {
+            return age >=16 ? true : false;
+
+        } 
+
+        if (isEligibleAgeWithParam(30)) {
+            
+        }
+
+        // reduce add gasrxa
+         
+        const marks = [10,20,30,40];
+        var showResult = document.getElementById("result");
+
+        getResult(marks);
+
+        function getResult(marks) {
+            
+            if(!isPassInAllSubject(marks))
+            for (var i=0; i<4; i++)
+            {
+                if(marks[i]<40){
+                    alert ("You are Failed");
+                    console.log("Your are fail");
+                }
+                else
+                {
+                    showResult.textContent = "You Are pass";
+                    console.log("Your are pass");
+                }
+            }
+        }
+
+        function getTotalMark(){
+            var totalMarks = 0; 
+            for (var i = 0; i<marks.length; i++)
+            {
+                totalMarks += marks[i];
+            }
+        }
+
+        function getPercentage(){
+
+        }
+    
+    </script>
+</body>
+</html>

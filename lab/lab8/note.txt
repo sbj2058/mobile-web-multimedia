@@ -1,0 +1,5 @@
+Bubbling 
+Capturing 
+Event =-
+
+clean code 
