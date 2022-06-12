@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Learn jQuery</p>
+    <p>Learn Another P Element</p>
+
+    <button id="show">Show</button>
+    <button id="hide">Hide</button>
+    <button id="toggle">Toggle</button>
+
+    <input type="text" name="username" placeholder="name">
+
+    <p> Your name is <span id="display-username"></span></p>
+
+    <script src="./asset/jquery3.6.js"></script>
+    
+    <script type="text/javascript">
+        // [property and value]
+        $("input[name=username]").keyup(function (event){
+            const username = event.target.value;
+
+            $("#display-username").text(username);
+
+            // $("#display-username").text(event.target.value);
+        
+        });
+        // callback
+        $(document).ready(function () {
+            // $ for selection 
+            $("p").click(function (event) {
+                alert("Hi");
+                console.log(event.target);
+            });
+        });
+
+        $("#show").click(function () {
+            $("p").show(1000);
+        });
+
+        $("#hide").click(function () {
+            $("p").hide(200);
+        });
+
+        $("#toggle").click(function () {
+            $("p").toggle(200);
+        })
+
+    </script>
+</body>
+
+</html>
