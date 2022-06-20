@@ -1,0 +1,22 @@
+
+.wrapper {
+    display:flex;
+    justify-content: center;
+    margin: auto; 
+    height: 1vh;
+    
+  
+}
+.add-todo{
+    display: flex;
+    align-items: center;
+    
+}
+ul{
+    list-style-type: none;
+    
+}
+.add-button{
+    height: 25px;
+    padding: 10px;
+}

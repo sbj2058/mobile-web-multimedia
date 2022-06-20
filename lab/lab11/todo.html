@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+</head>
+<body>
+    <input type="text" id="todo-value" name="" value="" placeholder="enter something">
+    <div id="result"></div>
+
+    <script type="text/javascript">
+        let tasks = [];
+        const inputEl = document.getElementById("todo-value");
+        const resultEl = document.getElementById("result");
+
+        // class Task 
+        // {
+        //     name;
+        //     isComplete;
+        //     constructor(name){
+        //         console.log("automatcally call vaideko?");
+        //         this.name = name;
+        //         this.isComplete = false;
+        //     }
+        //     marksAsComplete (){
+        //         this.isComplete = true;
+        //     }
+        //     marksAsInComplete (){
+        //         this.isComplete = false;
+        //     }
+        // }
+
+        function Task(name)
+        {
+            this.name = name ;
+            this.isComplete = false;
+            this.marksAsComplete = () => this.isComplete = true();
+            this.marksAsInComplete = () => this.isComplete = false();
+            this.marksAsInComplete = () => this.isComplete = !this.isComplete;
+        }
+
+        function addTask(name)
+        {
+            tasks.push(new Task(name));
+        }
+
+        function marksAllAsComplete(){
+            task.forEach((task) => task.isCompelete = true)
+        }
+        function marksAllAsInComplete(){
+            task.forEach((task) => task.isCompelete = false)
+        }
+
+        function resetInput (){
+
+        }
+        inputEl.addEventListener("keyup", function(event){
+            if(event.key == "Enter"){
+                addTask(inputEl.value);
+                resetInput();
+            }
+        })
+        function renderDOM(){
+            resultEl.innerHTML = "";
+        tasks.forEach(function (task){
+            resultEl.innerHTML += `<p> ${task.name}</p>`;
+        })
+        }
+    </script>
+</body>
+</html>
